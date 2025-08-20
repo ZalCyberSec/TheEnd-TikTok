@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The End TikTok - Download Video TikTok Tanpa Watermark</title>
-  <link id="icon" rel="icon" href="https://files.cloudkuimages.guru/images/fPzNJq0G.jpg" type="image/png">
+  <link id="icon" rel="icon" href="https://files.catbox.moe/srkvgn.jpg" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -17,7 +17,7 @@
       --success: #10b981;
       --error: #ef4444;
       --radius: 12px;
-      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7);
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7); /* tidak dipakai lagi */
     }
 
     * {
@@ -53,13 +53,11 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      animation: glowText 3s infinite alternate;
+      /* HAPUS ANIMASI & GLOW */
+      animation: none;
     }
 
-    @keyframes glowText {
-      from { text-shadow: 0 0 10px #2563eb, 0 0 20px #1e40af; }
-      to { text-shadow: 0 0 20px #60a5fa, 0 0 40px #7c3aed; }
-    }
+    /* keyframes glowText tidak dipakai */
 
     header p {
       color: var(--text-light);
@@ -71,7 +69,8 @@
     .card {
       background: rgba(15, 23, 42, 0.9);
       border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      /* HAPUS SHADOW */
+      /* box-shadow: var(--shadow); */
       padding: 30px;
       margin-bottom: 30px;
       border: 1px solid var(--border);
@@ -101,7 +100,8 @@
     input[type="url"]:focus {
       outline: none;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+      /* HAPUS FOCUS SHADOW */
+      /* box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3); */
     }
 
     button {
@@ -114,14 +114,12 @@
       cursor: pointer;
       transition: all 0.3s ease;
       font-size: 16px;
-      box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
-      animation: pulseGlow 2s infinite alternate;
+      /* HAPUS GLOW SHADOW & ANIMASI */
+      /* box-shadow: 0 0 10px rgba(37, 99, 235, 0.6); */
+      animation: none;
     }
 
-    @keyframes pulseGlow {
-      from { box-shadow: 0 0 10px #2563eb, 0 0 20px #1e40af; }
-      to { box-shadow: 0 0 20px #60a5fa, 0 0 40px #7c3aed; }
-    }
+    /* keyframes pulseGlow tidak dipakai */
 
     button:hover {
       background: linear-gradient(90deg, #2563eb, #1e3a8a);
@@ -174,11 +172,14 @@
       padding: 20px;
       background: rgba(30, 41, 59, 0.9);
       transition: all 0.3s ease;
+      /* HAPUS SHADOW */
+      /* box-shadow: var(--shadow); */
     }
 
     .download-option:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+      /* HAPUS GLOW HOVER */
+      /* box-shadow: 0 0 15px rgba(37, 99, 235, 0.5); */
     }
 
     .download-option h4 {
@@ -237,14 +238,16 @@
       background: rgba(15, 23, 42, 0.9);
       border-radius: var(--radius);
       padding: 25px;
-      box-shadow: var(--shadow);
+      /* HAPUS SHADOW */
+      /* box-shadow: var(--shadow); */
       border: 1px solid var(--border);
       transition: all 0.3s ease;
     }
 
     .step:hover {
       transform: translateY(-3px);
-      box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+      /* HAPUS GLOW HOVER */
+      /* box-shadow: 0 0 15px rgba(124, 58, 237, 0.5); */
     }
 
     .step-number {
@@ -320,7 +323,7 @@
       </div>
       
       <div class="tutorial">
-        <h2>Cara Menggunakan TikDown</h2>
+        <h2>Cara Menggunakan The End Donwload</h2>
         <div class="steps">
           <div class="step">
             <span class="step-number">1</span>
@@ -477,9 +480,10 @@
         resultElement.scrollIntoView({ behavior: 'smooth' });
       }
       
+      const tiktokUrlInput = document.getElementById('tiktok-url');
       tiktokUrlInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
-          downloadBtn.click();
+          document.getElementById('download-btn').click();
         }
       });
     });
